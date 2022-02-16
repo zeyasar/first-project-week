@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Number</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 90%;
+            margin: 5rem auto;
+
+        }
+        .main{
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+        .input, .header, .warning, .feedback{
+            text-align: center;
+        }
+        input{
+            height: 1.5rem;
+            margin-top: 1rem;
+            border: 1px solid rgb(238, 85, 85);
+        }
+        button{
+            height: 1.5rem;
+            width: 4rem;
+            border: 1px solid rgb(238, 85, 85);
+        }
+        h1{
+            font-family: 'Permanent Marker', cursive;
+            font-size: 2.5rem;
+            color: rebeccapurple;
+        }
+        .war_area{
+            font-size: 2rem;
+            color: red;
+        }
+        .congrats{
+            width: 5rem;
+            margin: 10px auto;
+            display: none;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img">
+            <img src="./img/wizard.png" alt="img" width="100%">
+        </div>
+        <div class="main">
+            <div class="header">
+                <h1>Guess the Number <br>(1-100)</h1>
+            </div>
+            <div class="input">
+                <input type="number" name="guess" id="guess" >
+                <button class="check">Check</button>
+            </div>
+            <div class="warning">
+                <p class="war_area"></p>
+                <img src="./img/4_large.png" alt="img" class="congrats">
+            </div>
+            <div class="feedback">
+                <p>Number of attempts : <span class="feed_area">7</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

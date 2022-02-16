@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }
+        h2{
+            font-variant: small-caps;
+        }
+        .add_area{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3.5rem;
+            position: relative;
+            bottom: 14px;
+            color: rgb(0, 122, 203);
+        }
+        a{
+            text-decoration: none;
+        }
+        li{
+            list-style-type: none;
+            height: 2.5rem;
+        }
+        .container{
+            display: grid;
+            grid-template-rows: 1fr 1fr 5fr;
+            width: 60%;
+            margin: 3rem auto;
+            outline: 5px solid rgb(0, 122, 203);
+            outline-offset: 2rem;
+            outline-style: inset;
+        }
+        .input_area{
+            display: flex;
+            height: 2rem;
+            margin-top: 10px;
+        }
+        #new-task{
+            width: 80%;
+            font-size: 1rem;
+            border: none;
+        }
+        #new-task:focus{
+            outline: none;
+            border: none;
+        }
+        .items_header{
+            display: flex;
+            justify-content: space-between;
+        }
+        .deleteAll_item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5px;
+            margin-right: 30px;
+            color: black;
+            
+        }
+        .ul_container{
+            margin-top: 2rem;
+        }
+        .delete_item{
+            float: right;
+            margin-right: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header_container">
+            <div class="header">
+                <h2>Add a New Task</h2>
+            </div>
+            <div class="input_area">
+                <input type="text" name="new_task" id="new-task" placeholder="Type a new task...">
+                <a href="#" class="add_area">+</a>
+            </div>
+        </div>
+        <div class="ul_container">
+            <div class="items_header">
+                <h2>Task List</h2>
+                <a href="#" class="deleteAll_item">Delete All</a>
+            </div>
+        </div>
+        <ul class="ul_items">
+            <li class="list_items">list item
+                <a href="#" class="delete_item">❌</a>
+            </li>
+            
+        </ul>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
