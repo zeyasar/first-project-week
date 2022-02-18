@@ -5,7 +5,7 @@ let check_button = document.querySelector(".check");
 let congImg = document.querySelector(".congrats")
 
 let num = Math.trunc(Math.random()*99+1);
-
+console.log(num);
 
 let lowTip = 0;
 let highTip = 100;
@@ -44,7 +44,12 @@ check_button.addEventListener("click", () => {
     feedback.innerHTML = `${count}`
     
     if (count == 0) {
-        caution.innerHTML = `SORRY TRY AGAIN!!!!`
+        if (prediction.value == num) {
+            caution.innerHTML = `YOU ARE WINNER...`;
+            congImg.style.display = "block"; 
+        
+        }else{caution.innerHTML = `SORRY TRY AGAIN!!!!`}
+        
     }
     
 

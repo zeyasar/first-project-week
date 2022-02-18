@@ -1,6 +1,6 @@
 # Javascript Projects
 
-Javascript workshop ontains 4 different projects.
+Javascript workshop contains 4 different projects.
 
 
 - [Find-the-Number-Game]
