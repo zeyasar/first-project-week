@@ -8,6 +8,7 @@ let randomlist = document.querySelector('.loto_number');
 button.addEventListener('click', () => {
     if (sets.value < 1 || sets.value >8) {
         alert(`Please enter number between 1 and 8`);
+        return;
     }
     resultDiv.innerHTML = '';
     function luckylist() {
